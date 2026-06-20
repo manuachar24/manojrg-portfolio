@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manoj RG - Data Scientist Portfolio</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #1a365d;
+            --primary-light: #2d5a8c;
+            --accent: #0066cc;
+            --accent-dark: #0052a3;
+            --success: #059669;
+            --warning: #d97706;
+            --bg: #ffffff;
+            --bg-secondary: #f8fafc;
+            --text-primary: #1e293b;
+            --text-secondary: #64748b;
+            --border: #e2e8f0;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.07), 0 10px 20px rgba(0, 0, 0, 0.05);
+            --shadow-lg: 0 20px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+            color: var(--text-primary);
+            background: var(--bg);
+            line-height: 1.6;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Navigation */
+        nav {
+            position: sticky;
+            top: 0;
+            background: var(--bg);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-brand {
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: white;
+            padding: 6rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(0, 102, 204, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            letter-spacing: -1px;
+        }
+
+        .hero .title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            opacity: 0.95;
+        }
+
+        .hero-tagline {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            line-height: 1.8;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background: white;
+            color: var(--primary);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Contact Grid */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .contact-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1.25rem;
+            border-radius: 8px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .contact-item:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 255, 255, 0.4);
+        }
+
+        .contact-item a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            word-break: break-all;
+        }
+
+        .contact-label {
+            font-size: 0.85rem;
+            opacity: 0.8;
+            display: block;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Sections */
+        section {
+            padding: 5rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        section:last-child {
+            border-bottom: none;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+            letter-spacing: -0.5px;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 3rem;
+        }
+
+        /* About */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .stat-card {
+            background: var(--bg-secondary);
+            padding: 2rem;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--accent);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: var(--text-secondary);
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+        }
+
+        /* Experience */
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(180deg, var(--accent) 0%, transparent 100%);
+        }
+
+        .timeline-item {
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .timeline-item:last-child {
+            border-bottom: none;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: -8px;
+            top: 5px;
+            width: 16px;
+            height: 16px;
+            background: var(--accent);
+            border: 3px solid var(--bg);
+            border-radius: 50%;
+            box-shadow: 0 0 0 2px var(--accent);
+        }
+
+        .timeline-date {
+            color: var(--accent);
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+
+        .timeline-company {
+            color: var(--text-secondary);
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+        .timeline-description {
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+
+        .timeline-description li {
+            margin-left: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        /* Projects */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .project-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow);
+            border-color: var(--accent);
+        }
+
+        .project-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--accent) 0%, var(--primary) 100%);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .tech-badge {
+            background: var(--bg);
+            color: var(--accent);
+            padding: 0.35rem 0.75rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            border: 1px solid var(--accent);
+        }
+
+        .project-description {
+            flex-grow: 1;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-metrics {
+            display: flex;
+            gap: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .metric {
+            flex: 1;
+            text-align: center;
+        }
+
+        .metric-value {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--accent);;
+            display: block;
+        }
+
+        .metric-label {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+            font-weight: 600;
+        }
+
+        /* Skills */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-category {
+            background: var(--bg-secondary);
+            padding: 2rem;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+
+        .skill-category-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .skill-category-icon {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, var(--accent) 0%, var(--primary) 100%);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1rem;
+        }
+
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .skill-item {
+            background: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            border: 1px solid var(--border);
+            color: var(--text-primary);
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .skill-item:hover {
+            background: var(--accent);
+            color: white;
+            border-color: var(--accent);
+        }
+
+        /* Certifications */
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .cert-item {
+            display: flex;
+            gap: 1rem;
+            padding: 1.5rem;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .cert-item:hover {
+            border-color: var(--accent);
+            background: var(--bg);
+        }
+
+        .cert-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--success) 0%, var(--accent) 100%);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .cert-content h4 {
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+            color: var(--primary);
+        }
+
+        .cert-content p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.25rem;
+        }
+
+        .cert-date {
+            font-size: 0.8rem;
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: white;
+            text-align: center;
+            padding: 4rem 2rem;
+            border-radius: 8px;
+            margin-top: 5rem;
+        }
+
+        .cta-section h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+            margin-bottom: 2rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 3rem 2rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .social-links a:hover {
+            background: white;
+            color: var(--primary);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                gap: 1rem;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero .title {
+                font-size: 1.2rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .about-content,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .skill-category {
+                min-width: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="nav-brand">Manoj RG</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Manoj RG</h1>
+            <div class="title">Data Scientist & Analytics Engineer</div>
+            <p class="hero-tagline">
+                Recent graduate specializing in predictive modeling, NLP pipelines, and data-driven dashboards. 
+                Ready to contribute to impactful analytics and AI projects. Open to Junior Data Scientist, 
+                Data Analyst, and Analytics Engineer roles.
+            </p>
+
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <span class="contact-label">📧 Email</span>
+                    <a href="mailto:manojrgmanojrg4@gmail.com">manojrgmanojrg4@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-label">📱 Phone</span>
+                    <a href="tel:+919980547223">+91 9980547223</a>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-label">💬 WhatsApp</span>
+                    <a href="https://wa.me/919980547223" target="_blank">Chat on WhatsApp</a>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-label">📍 Location</span>
+                    <a href="#contact">Davangere, Karnataka, India</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">Why Hire Me</h2>
+            <p class="section-subtitle">What sets me apart in data science and analytics</p>
+
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        <strong>🎯 Full-Stack Analytics Professional:</strong> I own projects end-to-end—from raw data to production dashboards. 
+                        I've built ETL pipelines, trained ML models, and delivered insights that directly impact business decisions.
+                    </p>
+                    <p>
+                        <strong>📊 Metrics-Driven Impact:</strong> At Spherenex, I improved forecast accuracy by 12%, reduced reporting effort by 30%, 
+                        and achieved 80%+ accuracy on churn prediction models. Every project has measurable outcomes.
+                    </p>
+                    <p>
+                        <strong>💻 Modern Tech Stack:</strong> Python, SQL, Power BI, XGBoost, PyTorch, and cloud deployment. 
+                        I write production-ready code and optimize queries for speed and clarity.
+                    </p>
+                    <p>
+                        <strong>🚀 NLP & Advanced Analytics:</strong> Deployed sentiment analysis pipelines with BERT, 
+                        built real-time classification apps, and designed customer segmentation engines that drive targeted strategies.
+                    </p>
+                    <p style="margin-top: 2rem; padding-top: 2rem; border-top: 2px solid var(--border);">
+                        <strong style="color: var(--accent); font-size: 1.1rem;">🎓 Recently Graduated | Actively Seeking Opportunities</strong><br>
+                        I'm open to <strong>Junior Data Scientist</strong>, <strong>Associate Data Analyst</strong>, and <strong>Analytics Engineer</strong> 
+                        roles. Let's connect and discuss how I can contribute to your team!
+                    </p>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <span class="stat-number">5</span>
+                        <span class="stat-label">End-to-End Projects</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">8.2</span>
+                        <span class="stat-label">CGPA (AI & ML)</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">80%</span>
+                        <span class="stat-label">Model Accuracy</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">4</span>
+                        <span class="stat-label">Months Internship</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <div class="container">
+            <h2 class="section-title">Professional Experience</h2>
+            <p class="section-subtitle">Proven track record in data science and analytics</p>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Feb 2026 – May 2026 (Completed)</div>
+                    <div class="timeline-title">AI & Data Science Intern</div>
+                    <div class="timeline-company">Spherenex – Nexspyder Technologies Pvt Ltd | Bangalore, KA</div>
+                    <div class="timeline-description">
+                        AI-focused product startup where I led full-cycle analytics projects:
+                        <ul>
+                            <li><strong>EDA & Feature Engineering:</strong> Processed 5K–10K record datasets; reduced data inconsistencies by ~35%</li>
+                            <li><strong>Power BI Dashboards:</strong> Built KPI dashboards tracking revenue and customer behavior for 3+ stakeholder teams</li>
+                            <li><strong>SQL Optimization:</strong> Wrote advanced queries (Joins, CTEs, Window Functions) reducing manual reporting effort by ~30%</li>
+                            <li><strong>ML Model Training:</strong> Trained Logistic Regression, Random Forest, XGBoost; improved forecast accuracy by ~12%</li>
+                            <li><strong>NLP Pipeline:</strong> Built tokenization, stopword removal, VADER, BERT pipeline; deployed real-time sentiment analysis Streamlit app</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2022 – 2026 (Graduated)</div>
+                    <div class="timeline-title">B.E. - Artificial Intelligence & Machine Learning</div>
+                    <div class="timeline-company">Karavali Institute of Technology | Mangalore, KA</div>
+                    <div class="timeline-description">
+                        Specialized coursework in AI, machine learning, data analysis, and statistical methods. 
+                        CGPA: 8.2/10 | Built 4+ end-to-end projects in data science and NLP during academics.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title">Key Projects & Achievements</h2>
+            <p class="section-subtitle">Real-world applications of data science and analytics</p>
+
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-icon">📊</div>
+                    <h3 class="project-title">Customer Churn Intelligence Dashboard</h3>
+                    <div class="project-tech">
+                        <span class="tech-badge">XGBoost</span>
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">Streamlit</span>
+                        <span class="tech-badge">Scikit-learn</span>
+                    </div>
+                    <p class="project-description">
+                        Built end-to-end churn prediction system analyzing telecom patterns. Engineered 15+ features, 
+                        trained classifier with 80.34% accuracy, and deployed interactive dashboard for stakeholder exploration.
+                    </p>
+                    <div class="project-metrics">
+                        <div class="metric">
+                            <span class="metric-value">80.34%</span>
+                            <span class="metric-label">Accuracy</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">0.857</span>
+                            <span class="metric-label">ROC-AUC</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">15+</span>
+                            <span class="metric-label">Features</span>
+                        </div>
+                    </div>
+                    <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--border);">
+                        <a href="https://github.com/manuachar24/customer-churn-intelligence-dashboard" target="_blank" style="color: var(--accent); text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem;">
+                            <i class="fab fa-github"></i> View Code on GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-icon">💰</div>
+                    <h3 class="project-title">Customer Behavior Analytics Dashboard</h3>
+                    <div class="project-tech">
+                        <span class="tech-badge">Power BI</span>
+                        <span class="tech-badge">SQL</span>
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">MySQL</span>
+                    </div>
+                    <p class="project-description">
+                        Complete data pipeline from raw transactions to Power BI dashboards. 
+                        Advanced SQL queries for category performance and repeat customer analysis. Weekly stakeholder reporting.
+                    </p>
+                    <div class="project-metrics">
+                        <div class="metric">
+                            <span class="metric-value">₹233K</span>
+                            <span class="metric-label">Revenue</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">27%</span>
+                            <span class="metric-label">Sub Rate</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">30%</span>
+                            <span class="metric-label">↓ Time</span>
+                        </div>
+                    </div>
+                    <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--border);">
+                        <a href="https://github.com/manuachar24/Customer-Behavior-Analytics-PowerBI" target="_blank" style="color: var(--accent); text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem;">
+                            <i class="fab fa-github"></i> View Code on GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-icon">🎯</div>
+                    <h3 class="project-title">NLP Sentiment Analysis Pipeline</h3>
+                    <div class="project-tech">
+                        <span class="tech-badge">BERT</span>
+                        <span class="tech-badge">NLTK</span>
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">Streamlit</span>
+                    </div>
+                    <p class="project-description">
+                        Dual-model NLP pipeline combining NLTK VADER and BERT Transformers. 
+                        Preprocessed 10K+ samples and deployed real-time classification app for stakeholders.
+                    </p>
+                    <div class="project-metrics">
+                        <div class="metric">
+                            <span class="metric-value">10K+</span>
+                            <span class="metric-label">Samples</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">8%</span>
+                            <span class="metric-label">F1 Gain</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">2</span>
+                            <span class="metric-label">Models</span>
+                        </div>
+                    </div>
+                    <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--border);">
+                        <a href="https://github.com/manuachar24/Sentiment-Analysis-using-NLTK" target="_blank" style="color: var(--accent); text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem;">
+                            <i class="fab fa-github"></i> View Code on GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card">
+                    <div class="project-icon">🌍</div>
+                    <h3 class="project-title">Global COVID-19 Analytics Dashboard</h3>
+                    <div class="project-tech">
+                        <span class="tech-badge">Power BI</span>
+                        <span class="tech-badge">SQL</span>
+                        <span class="tech-badge">Python ETL</span>
+                        <span class="tech-badge">DAX</span>
+                    </div>
+                    <p class="project-description">
+                        Automated ETL pipeline processing 19M+ COVID-19 records across 180+ countries. 
+                        Power BI dashboard with dynamic KPIs and continent/country drill-down analysis.
+                    </p>
+                    <div class="project-metrics">
+                        <div class="metric">
+                            <span class="metric-value">19M+</span>
+                            <span class="metric-label">Records</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">180+</span>
+                            <span class="metric-label">Countries</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">63%</span>
+                            <span class="metric-label">Recovery</span>
+                        </div>
+                    </div>
+                    <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--border);">
+                        <a href="https://github.com/manuachar24/Global-Covid19-Analytics-Dashboard" target="_blank" style="color: var(--accent); text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem;">
+                            <i class="fab fa-github"></i> View Code on GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <p class="section-subtitle">Comprehensive toolkit for modern data science</p>
+
+            <div class="skills-container">
+                <div class="skill-category">
+                    <div class="skill-category-title">
+                        <div class="skill-category-icon">🐍</div>
+                        Programming Languages
+                    </div>
+                    <div class="skill-list">
+                        <div class="skill-item">Python</div>
+                        <div class="skill-item">SQL</div>
+                        <div class="skill-item">Advanced Excel</div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-category-title">
+                        <div class="skill-category-icon">🤖</div>
+                        Machine Learning
+                    </div>
+                    <div class="skill-list">
+                        <div class="skill-item">Scikit-learn</div>
+                        <div class="skill-item">XGBoost</div>
+                        <div class="skill-item">Logistic Regression</div>
+                        <div class="skill-item">Random Forest</div>
+                        <div class="skill-item">Gradient Boosting</div>
+                        <div class="skill-item">PyTorch</div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-category-title">
+                        <div class="skill-category-icon">💬</div>
+                        Natural Language Processing
+                    </div>
+                    <div class="skill-list">
+                        <div class="skill-item">NLTK</div>
+                        <div class="skill-item">VADER</div>
+                        <div class="skill-item">BERT</div>
+                        <div class="skill-item">Transformers</div>
+                        <div class="skill-item">Sentiment Analysis</div>
+                        <div class="skill-item">Text Preprocessing</div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-category-title">
+                        <div class="skill-category-icon">📊</div>
+                        Data Analysis & BI
+                    </div>
+                    <div class="skill-list">
+                        <div class="skill-item">Power BI</div>
+                        <div class="skill-item">DAX</div>
+                        <div class="skill-item">Pandas</div>
+                        <div class="skill-item">NumPy</div>
+                        <div class="skill-item">Matplotlib</div>
+                        <div class="skill-item">Seaborn</div>
+                        <div class="skill-item">Plotly</div>
+                        <div class="skill-item">EDA</div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-category-title">
+                        <div class="skill-category-icon">☁️</div>
+                        Cloud & Tools
+                    </div>
+                    <div class="skill-list">
+                        <div class="skill-item">AWS EC2</div>
+                        <div class="skill-item">AWS S3</div>
+                        <div class="skill-item">Streamlit</div>
+                        <div class="skill-item">FastAPI</div>
+                        <div class="skill-item">MySQL Workbench</div>
+                        <div class="skill-item">Git & GitHub</div>
+                        <div class="skill-item">Jupyter</div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-category-title">
+                        <div class="skill-category-icon">📈</div>
+                        Data Science
+                    </div>
+                    <div class="skill-list">
+                        <div class="skill-item">Feature Engineering</div>
+                        <div class="skill-item">Statistical Analysis</div>
+                        <div class="skill-item">A/B Testing</div>
+                        <div class="skill-item">Hypothesis Testing</div>
+                        <div class="skill-item">SciPy</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section>
+        <div class="container">
+            <h2 class="section-title">Certifications & Achievements</h2>
+            <p class="section-subtitle">Continuous learning and professional recognition</p>
+
+            <div class="cert-grid">
+                <div class="cert-item">
+                    <div class="cert-icon">🏆</div>
+                    <div class="cert-content">
+                        <h4>RemarkSkill Technical Workshop</h4>
+                        <p>AI & Machine Learning</p>
+                        <span class="cert-date">March 2025</span>
+                        <p style="font-size: 0.8rem; margin-top: 0.5rem;">RemarkSkill × INCIDENT, NITK Surathkal</p>
+                    </div>
+                </div>
+
+                <div class="cert-item">
+                    <div class="cert-icon">🚀</div>
+                    <div class="cert-content">
+                        <h4>National Level Hackathon</h4>
+                        <p>Project Omega 2025 (24-Hour)</p>
+                        <span class="cert-date">April 2025</span>
+                        <p style="font-size: 0.8rem; margin-top: 0.5rem;">Yenepoya Institute</p>
+                    </div>
+                </div>
+
+                <div class="cert-item">
+                    <div class="cert-icon">📚</div>
+                    <div class="cert-content">
+                        <h4>E-Business NPTEL Certification</h4>
+                        <p>12-Week Online Course</p>
+                        <span class="cert-date">Jul–Oct 2025</span>
+                        <p style="font-size: 0.8rem; margin-top: 0.5rem;">IIT Kharagpur</p>
+                    </div>
+                </div>
+
+                <div class="cert-item">
+                    <div class="cert-icon">🔐</div>
+                    <div class="cert-content">
+                        <h4>Privacy & Security Certification</h4>
+                        <p>Online Social Media Security</p>
+                        <span class="cert-date">Jul–Oct 2025</span>
+                        <p style="font-size: 0.8rem; margin-top: 0.5rem;">IIIT Hyderabad</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="cta-section">
+                <h2>Let's Build Something Great Together! 🚀</h2>
+                <p>I'm excited to bring my data science skills to your team. Reach out to discuss how I can contribute to your analytics goals.</p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="mailto:manojrgmanojrg4@gmail.com" class="btn btn-primary">
+                        <i class="fas fa-envelope"></i> Send Email
+                    </a>
+                    <a href="https://wa.me/919980547223" target="_blank" class="btn btn-secondary">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a>
+                    <a href="tel:+919980547223" class="btn btn-secondary">
+                        <i class="fas fa-phone"></i> Call Me
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="https://github.com/manuachar24" target="_blank" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/manoj-r-g-448751241" target="_blank" title="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="mailto:manojrgmanojrg4@gmail.com" title="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://wa.me/919980547223" target="_blank" title="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+            <p>&copy; 2026 Manoj RG. All rights reserved. | Recent Graduate, Data Scientist & Analytics Engineer</p>
+            <p style="font-size: 0.9rem; opacity: 0.9; margin-top: 1rem;">Davangere, Karnataka, India</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Add scroll effect to navbar
+        let lastScroll = 0;
+        const nav = document.querySelector('nav');
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            if (currentScroll > 50) {
+                nav.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.08)';
+            } else {
+                nav.style.boxShadow = '0 2px 4px rgba(0, 0, 0, 0.03)';
+            }
+            lastScroll = currentScroll;
+        });
+    </script>
+</body>
+</html>

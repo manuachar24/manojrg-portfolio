@@ -1,0 +1,134 @@
+═══════════════════════════════════════════════════════════════════════════════
+📋 LINKEDIN PROFILE SUMMARY & HEADLINE
+═══════════════════════════════════════════════════════════════════════════════
+
+🔴 HEADLINE (120 characters max)
+─────────────────────────────────
+Data Scientist & Analytics Engineer | AI/ML Graduate | Python • SQL • Power BI
+
+
+📘 ABOUT SECTION (2,600 character limit - paste this entire block)
+─────────────────────────────────
+
+I'm a data-driven professional specializing in transforming raw data into actionable 
+business insights. Recent graduate with hands-on experience in predictive modeling, 
+NLP, and business intelligence, demonstrated through a paid internship and 5+ 
+end-to-end analytics projects.
+
+🎯 WHAT I DO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✓ Build end-to-end ML models (80%+ accuracy on production datasets)
+✓ Design & deploy interactive BI dashboards (Power BI, DAX)
+✓ Optimize SQL queries for performance (CTEs, Window Functions, Aggregations)
+✓ Build NLP pipelines (BERT, VADER, sentiment analysis)
+✓ Own projects from raw data to stakeholder insights
+
+📊 RECENT IMPACT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+At Spherenex (AI-focused product startup), I:
+• Improved forecast accuracy by 12% through feature engineering & model optimization
+• Reduced manual reporting effort by 30% with advanced SQL queries
+• Built customer churn prediction model achieving 80.34% accuracy & 0.857 ROC-AUC
+• Deployed real-time NLP sentiment analysis Streamlit app for stakeholders
+• Processed 5K-10K record datasets, reducing data inconsistencies by 35%
+
+💻 TECHNICAL STACK
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Languages: Python • SQL • Advanced Excel
+ML & AI: Scikit-learn • XGBoost • PyTorch • Random Forest • Gradient Boosting
+NLP: NLTK • VADER • BERT • Transformers • Sentiment Analysis
+BI & Visualization: Power BI • DAX • Matplotlib • Seaborn • Plotly
+Cloud & Tools: AWS EC2/S3 • Streamlit • FastAPI • Git • MySQL • Jupyter
+
+📁 FEATURED PROJECTS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1️⃣ Customer Churn Intelligence Dashboard
+   → 80.34% accuracy | 15+ engineered features | Interactive Streamlit app
+   GitHub: github.com/manuachar24/customer-churn-intelligence-dashboard
+
+2️⃣ Customer Behavior Analytics Dashboard
+   → ₹233K revenue analyzed | 27% subscription rate | 30% ↓ reporting time
+   GitHub: github.com/manuachar24/Customer-Behavior-Analytics-PowerBI
+
+3️⃣ NLP Sentiment Analysis Pipeline
+   → 10K+ text samples | NLTK VADER + BERT ensemble | 8% F1 gain
+   GitHub: github.com/manuachar24/Sentiment-Analysis-using-NLTK
+
+4️⃣ Global COVID-19 Analytics Dashboard
+   → 19M+ records | 180+ countries | Automated ETL pipeline
+   GitHub: github.com/manuachar24/Global-Covid19-Analytics-Dashboard
+
+🎓 EDUCATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+B.E. - Artificial Intelligence & Machine Learning
+Karavali Institute of Technology, Mangalore
+CGPA: 8.2/10 | Graduated: 2026
+
+Certifications:
+✓ RemarkSkill Technical Workshop on AI & ML (March 2025)
+✓ E-Business NPTEL Certification, IIT Kharagpur (Oct 2025)
+✓ Privacy & Security in Online Social Media, IIIT Hyderabad (Oct 2025)
+✓ National Level Hackathon Participant (April 2025)
+
+🎯 WHAT I'M LOOKING FOR
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✨ Junior Data Scientist role
+✨ Associate Data Analyst position
+✨ Analytics Engineer opportunity
+✨ Organizations focused on data-driven decision making
+
+🌟 WHY WORK WITH ME?
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✓ Full-stack capabilities: Data → Analysis → Insights → Dashboards
+✓ Metrics-driven mindset: Every project has measurable outcomes
+✓ Proven impact: 12% accuracy improvement, 30% time savings in real settings
+✓ Modern tech stack: Python, SQL, Power BI, ML frameworks, Cloud tools
+✓ Communication strength: Translate complex analytics for non-technical stakeholders
+✓ Continuous learner: Multiple certifications & hands-on project experience
+
+📬 LET'S CONNECT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📧 Email: manojrgmanojrg4@gmail.com
+📱 Phone: +91 9980547223
+💬 WhatsApp: wa.me/919980547223
+🔗 Portfolio: github.com/manuachar24
+📍 Location: Davangere, Karnataka, India
+
+I'm actively seeking opportunities to apply my data science skills to drive 
+meaningful business impact. Let's discuss how I can contribute to your team!
+
+═══════════════════════════════════════════════════════════════════════════════
+
+
+🎯 LINKEDIN HEADLINE OPTIONS (Choose one)
+─────────────────────────────────────────────────────────────────────────────
+
+Option 1 (Most professional):
+Data Scientist & Analytics Engineer | AI/ML Graduate | Python • SQL • Power BI
+
+Option 2 (More casual/engaging):
+Turning Data into Insights 📊 | Data Scientist | NLP • ML • BI
+
+Option 3 (Action-oriented):
+Building ML Models & Analytics Solutions | Recent Graduate | Seeking DS Role
+
+Option 4 (Full detail):
+Data Scientist | Predictive Modeling • NLP • Power BI | AI/ML Graduate
+
+
+═══════════════════════════════════════════════════════════════════════════════
+HOW TO USE THIS ON LINKEDIN
+═══════════════════════════════════════════════════════════════════════════════
+
+1. Go to your LinkedIn Profile → Edit Profile
+2. Update HEADLINE section - copy one of the headline options
+3. Scroll to ABOUT section → Edit
+4. Delete existing text and paste the ABOUT SECTION above
+5. Add links to your projects in the "Featured" section
+6. Save & publish
+
+TIP: Add your portfolio website link to the "Websites" section on your profile!
+Link: https://manuachar24.github.io/portfolio
+
+═══════════════════════════════════════════════════════════════════════════════
